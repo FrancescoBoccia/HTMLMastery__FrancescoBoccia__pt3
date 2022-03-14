@@ -6,47 +6,155 @@
     <meta name="viewport" content=" initial-scale=1.0" />
     <link rel="stylesheet" href="/style/css/style.css" />
     <script defer src="script.js"></script>
-    <title>Document</title>
+    <title>Digital NFT</title>
   </head>
 
-  <!-- Header Collection -->
-  <header class="header">
-    <div class="header__welcome">👋 Hi, Yellow Ghost</div>
-    <div class="header__title">Discover NFT & Digital Art!</div>
-    <form action="search">
-      <input type="text" placeholder="Type to search digital art..." />
-    </form>
-    <i class="header__message"></i>
-    <i class="header__notification"></i>
-    <div class="header__mode">
-      <i class="header__moon"></i>
-      <div class="header__modeTitle">Light Mode</div>
-    </div>
-  </header>
-  <body>
-    <!-- Collection Section -->
-    <div class="collection">
-      Top Collectibles <span class="collection__viewAll">View All</span>
-      <div class="collection__section">
-        <img src="" alt="collection Image" />
-        <div class="collection__title">
-          Beauty of Instructure #03
-          <span class="collection__title__state">New</span>
-          <div class="collection__user">
-            <img
-              class="collection__user__image"
-              src=""
-              alt="collection User Image"
-            />
-            <div class="collection__user__name">@infra.zed</div>
-            <span class="collection__user__mark"><i></i></span>
+
+  <div class="gridSection">
+
+    <!-- Header Section -->
+    <header class="header">
+      <div>
+        <div class="header__welcome">👋 Hi Yellow Ghost,</div>
+        <div class="header__title">Discover NFT & Digital Art!</div>
+      </div>
+      <form action="search">
+        <input class="header__search" type="text" placeholder="Type to search digital art..." />
+      </form>
+      <div class="header__mode">
+        <img class="header__mode__image" src="/icons/comment-dots-solid.svg" alt="Message Icon">
+        <i class="header__notification"></i>
+        <i class="header__moon"></i>
+        <div class="header__modeTitle">Light Mode</div>
+      </div>
+    </header>
+  
+    <body>
+      <!-- User Section -->
+      <!-- User -->
+      <div class="leftSection">
+        <div class="user">
+          <img class="user__image" src="/images/ghost.jpg" alt="" />
+          <div>
+            <div class="user__name">Yellow Ghost</div>
+            <div class="user__email">@ghostyel04</div>
+          </div>
+        </div>
+  
+          <div class="mainMenu">
+            <div class="mainMenu__section">
+              <div class="mainMenu__list">Main Menu
+                <div class="mainMenu__list__title">Overview</div>
+                <div class="mainMenu__list__title"><img src="/icons/eye-solid.svg" alt="eye Icon">Visible Bids</div>
+                <div class="mainMenu__list__title"><img src="/icons/wallet-solid.svg" alt="Wallet Icon">Your Wallet</div>
+                <div class="mainMenu__list__title"><img src="/icons/comment-dots-solid.svg" alt="Message Icon">Message</div>
+              </div>
+            </div>
+    
+            <div class="mainMenu__discover">
+              <div class="mainMenu__section">
+                <div class="mainMenu__list">Discover & Monitoring
+                  <div class="mainMenu__list__title"><img src="/icons/file-csv-solid.svg" alt="CSV icon"> Activity Stats</div>
+                  <div class="mainMenu__list__title"><img src="/icons/bolt-solid.svg" alt="Bolt Icon"> Live Auction</div>
+                  <div class="mainMenu__list__title"><i></i> Category</div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="mainMenu__other">
+              <div class="mainMenu__section">
+                <div class="mainMenu__section">Other Menu
+                  <div class="mainMenu__list__title"><i></i> Settings</div>
+                  <div class="mainMenu__list__title__logOut"><i></i> Log Out</div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  
+      <!-- Middle Section -->
+      <div class="middleSection">
+        <div class="collection">
+          <div class="collection__headTitle">Top Collectibles 
+            <span class="collection__viewAll">View all</span>
+          </div>
+          <div class="collection__grid">
+
+            <!-- Inside Collection Section -->
+            <div class="collection__section">
+              <img class="collection__image" src="/images/bbb.jpg" alt="collection Image" />
+              <div class="collection__title">
+                Beauty of Infrastructure #03
+                <span class="collection__title__state">NEW</span>
+                <div class="collection__user">
+                  <img
+                    class="collection__user__image"
+                    src="/images/ghost.jpg"
+                    alt="collection User Image"
+                  />
+                  <div class="collection__user__name">@infra.zed</div>
+                  <span class="collection__user__mark"><i></i></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="collection__section">
+              <img class="collection__image" src="/images/bbb.jpg" alt="collection Image" />
+              <div class="collection__title">
+                Beauty of Instructure #03
+                <span class="collection__title__state">NEW</span>
+                <div class="collection__user">
+                  <img
+                    class="collection__user__image"
+                    src="/images/ghost.jpg"
+                    alt="collection User Image"
+                  />
+                  <div class="collection__user__name">@infra.zed</div>
+                  <span class="collection__user__mark"><i></i></span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- Balance Section -->
-
-    
+  
+      <!-- Balance Section -->
+      <div class="rightSide">
+        <div class="balance">
+          Your Balance <span class="balance__addWallet">Add Wallet</span>
+          <div class="balance__wallet">
+            <div class="balance__actualBalance">Your Balance</div>
+            <div class="balance__numberBalance">206.5</div>
+            <div class="balance__walletCoin">
+              <img src="" alt="Ethereum coin" /> ETH
+            </div>
+            <div class="balance__topUp">
+              <i class="balance__topUp__plus">+</i>Top Up Balance >
+            </div>
+          </div>
+        </div>
+  
+        <!-- Featured Creators -->
+  
+        <div class="creator">
+          Featured Creators <span class="creator__all">View All</span>
+          <div class="creator__list">
+            <div class="creator__list__userImage">
+              <img src="" alt="User Profile" />
+            </div>
+            <div class="creator__list__userInfo">
+              <div class="creator__list__name">Mad Walkerz</div>
+              <div class="creator__list__email">@madwalkerz</div>
+            </div>
+            <div class="creator__list__numbers">
+              <div class="creator__list__percentage">-2.4%</div>
+              <div class="creator__lsit__walletValue"><i>↑</i>2479.9</div>
+            </div>
+          </div>
+          <div class="creator__button">Go to Rankings ></div>
+        </div>
+      </div>
+  </div>
+  <!-- Header Collection -->
   </body>
 </html>
