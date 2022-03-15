@@ -29,7 +29,6 @@ body {
 .gridSection {
   display: grid;
   grid-template-columns: 0.5fr 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 1fr 1fr 1fr;
   grid-template-areas:
     "leftSide header header header"
     "leftSide middleSection middleSection rightSide"
@@ -50,13 +49,66 @@ body {
   grid-area: rightSide;
 }
 
+// Header Section
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid var(--second--color);
+  padding: 2rem;
+  &__welcome {
+    font-size: 0.8em;
+    color: var(--text-color);
+    margin: 0 1rem 0.4rem 0.4rem;
+  }
+  &__title {
+    font-size: var(--font-size);
+    margin-left: 1rem;
+  }
+  &__search {
+    width: 100%;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 50px;
+    text-indent: 20px;
+    background-color: var(--second--color);
+    &:focus {
+      outline: none;
+    }
+  }
+  &__mode {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+    &__image {
+      width: 2rem;
+      height: 1.3rem;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+      object-fit: contain;
+    }
+  }
+  &__modeTitle {
+    padding: 0.6rem 0.6rem.6rem 3rem;
+    border-radius: 50px;
+    background-color: var(--second--color);
+    text-align: center;
+    color: var(--text-color);
+  }
+}
+
 // LeftSide Section
 
 .user {
   display: flex;
-  padding: 1rem;
-  border-bottom: 1px solid var(--second--color);
-
+  justify-content: center;
+  border-bottom: 1px solid var(--background--color);
+  padding: 2.13rem;
+  align-items: center;
+  padding-right: 3rem;
   &__image {
     width: 2rem;
     height: 2rem;
@@ -65,16 +117,19 @@ body {
     margin-right: 1rem;
   }
   &__name {
-    font-weight: 600;
+    width: max-content;
+    font-size: var(--font-size);
   }
   &__email {
+    font-size: 0.8em;
     margin-top: 0.2rem;
     color: var(--text-color);
   }
 }
 
 .mainMenu {
-  padding: 1rem;
+  width: max-content;
+  padding: 2rem;
   &__section {
     margin-bottom: 1rem;
   }
@@ -96,56 +151,15 @@ body {
       }
       &__logOut {
         color: #7b2331;
+        & > img {
+          width: 1.5rem;
+          height: 1rem;
+          margin-right: 0.5rem;
+          vertical-align: middle;
+          object-fit: contain;
+        }
       }
     }
-  }
-}
-
-// Header Section
-
-.header {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 1rem;
-  border-bottom: 1px solid var(--second--color);
-  justify-content: space-between;
-  align-items: center;
-  &__welcome {
-    font-size: 0.8em;
-    color: var(--text-color);
-    margin-bottom: 0.4rem;
-  }
-  &__title {
-    font-size: var(--font-size);
-  }
-  &__search {
-    width: 100%;
-    padding: 0.7rem;
-    border: none;
-    border-radius: 50px;
-    text-indent: 20px;
-    background-color: var(--second--color);
-    &:focus {
-      outline: none;
-    }
-  }
-  &__mode {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    &__image {
-      width: 1.5rem;
-      height: 1rem;
-      margin-right: 0.5rem;
-      vertical-align: middle;
-      object-fit: contain;
-    }
-  }
-  &__modeTitle {
-    padding: 0.6rem 0.6rem.6rem 3rem;
-    border-radius: 50px;
-    background-color: var(--second--color);
-    text-align: center;
   }
 }
 
@@ -157,7 +171,6 @@ body {
     display: flex;
     font-size: 1.1rem;
     justify-content: space-between;
-
     margin-bottom: 1rem;
   }
   &__viewAll {
@@ -216,12 +229,15 @@ body {
     align-items: center;
     margin-bottom: 1rem;
   }
+  &__addWallet {
+    color: var(--text-color);
+  }
   &__wallet {
     display: flex;
     justify-content: center;
+    margin: 1.5rem;
     align-items: center;
     flex-direction: column;
-    margin: 1rem;
     background-color: var(--second--color);
     border-radius: 20px;
   }
@@ -230,7 +246,7 @@ body {
     color: var(--text-color);
   }
   &__numberBalance {
-    font-size: 3em;
+    font-size: 2.5em;
   }
   &__walletCoin {
     display: flex;
@@ -251,9 +267,10 @@ body {
   &__topUp {
     width: 70%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding: 1.5rem;
+    gap: 1.5rem;
+    padding: 1.2rem;
     margin-bottom: 2rem;
     border-radius: 50px;
     border: 1px solid var(--highlight--color);
@@ -314,7 +331,7 @@ body {
     vertical-align: middle;
     width: 50%;
     padding: 1rem;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     border: 1px solid var(--highlight--color);
     border-radius: 50px;
   }

@@ -23,8 +23,6 @@ body {
   display: grid;
   -ms-grid-columns: 0.5fr 1fr 1fr 1fr;
       grid-template-columns: 0.5fr 1fr 1fr 1fr;
-  -ms-grid-rows: 0.5fr 1fr 1fr 1fr;
-      grid-template-rows: 0.5fr 1fr 1fr 1fr;
       grid-template-areas: "leftSide header header header" "leftSide middleSection middleSection rightSide" "leftSide middleSection middleSection rightSide" "leftSide middleSection middleSection rightSide"; }
 
 .header {
@@ -53,12 +51,72 @@ body {
   -ms-grid-column: 4;
   grid-area: rightSide; }
 
+.header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid var(--second--color);
+  padding: 2rem; }
+  .header__welcome {
+    font-size: 0.8em;
+    color: var(--text-color);
+    margin: 0 1rem 0.4rem 0.4rem; }
+  .header__title {
+    font-size: var(--font-size);
+    margin-left: 1rem; }
+  .header__search {
+    width: 100%;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 50px;
+    text-indent: 20px;
+    background-color: var(--second--color); }
+    .header__search:focus {
+      outline: none; }
+  .header__mode {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0.5rem; }
+    .header__mode__image {
+      width: 2rem;
+      height: 1.3rem;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+      -o-object-fit: contain;
+         object-fit: contain; }
+  .header__modeTitle {
+    padding: 0.6rem 0.6rem 0.6rem 3rem;
+    border-radius: 50px;
+    background-color: var(--second--color);
+    text-align: center;
+    color: var(--text-color); }
+
 .user {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 1rem;
-  border-bottom: 1px solid var(--second--color); }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid var(--background--color);
+  padding: 2.13rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 3rem; }
   .user__image {
     width: 2rem;
     height: 2rem;
@@ -66,13 +124,20 @@ body {
     border-radius: 10px;
     margin-right: 1rem; }
   .user__name {
-    font-weight: 600; }
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    font-size: var(--font-size); }
   .user__email {
+    font-size: 0.8em;
     margin-top: 0.2rem;
     color: var(--text-color); }
 
 .mainMenu {
-  padding: 1rem; }
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 2rem; }
   .mainMenu__section {
     margin-bottom: 1rem; }
   .mainMenu__list {
@@ -92,57 +157,13 @@ body {
         margin-top: 1rem; }
       .mainMenu__list__title__logOut {
         color: #7b2331; }
-
-.header {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  padding: 1rem;
-  border-bottom: 1px solid var(--second--color);
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  .header__welcome {
-    font-size: 0.8em;
-    color: var(--text-color);
-    margin-bottom: 0.4rem; }
-  .header__title {
-    font-size: var(--font-size); }
-  .header__search {
-    width: 100%;
-    padding: 0.7rem;
-    border: none;
-    border-radius: 50px;
-    text-indent: 20px;
-    background-color: var(--second--color); }
-    .header__search:focus {
-      outline: none; }
-  .header__mode {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    .header__mode__image {
-      width: 1.5rem;
-      height: 1rem;
-      margin-right: 0.5rem;
-      vertical-align: middle;
-      -o-object-fit: contain;
-         object-fit: contain; }
-  .header__modeTitle {
-    padding: 0.6rem 0.6rem 0.6rem 3rem;
-    border-radius: 50px;
-    background-color: var(--second--color);
-    text-align: center; }
+        .mainMenu__list__title__logOut > img {
+          width: 1.5rem;
+          height: 1rem;
+          margin-right: 0.5rem;
+          vertical-align: middle;
+          -o-object-fit: contain;
+             object-fit: contain; }
 
 .collection {
   padding: 1rem; }
@@ -213,6 +234,9 @@ body {
           align-items: center;
   margin-bottom: 1rem; }
 
+.balance__addWallet {
+  color: var(--text-color); }
+
 .balance__wallet {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -220,6 +244,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 1.5rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -227,7 +252,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 1rem;
   background-color: var(--second--color);
   border-radius: 20px; }
 
@@ -236,7 +260,7 @@ body {
   color: var(--text-color); }
 
 .balance__numberBalance {
-  font-size: 3em; }
+  font-size: 2.5em; }
 
 .balance__walletCoin {
   display: -webkit-box;
@@ -266,12 +290,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1.5rem;
+  gap: 1.5rem;
+  padding: 1.2rem;
   margin-bottom: 2rem;
   border-radius: 50px;
   border: 1px solid var(--highlight--color); }
@@ -341,7 +367,7 @@ body {
     vertical-align: middle;
     width: 50%;
     padding: 1rem;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     border: 1px solid var(--highlight--color);
     border-radius: 50px; }
 /*# sourceMappingURL=style.css.map */
